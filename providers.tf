@@ -4,8 +4,8 @@ provider "aws" {
 
 terraform {
   backend "s3" {
-    bucket = "syntest-ninja"
+    bucket = var.bucket
     key    = "terraform.tfstate"
-    region = "us-east-1"
+    region = var.region
   }
 }
